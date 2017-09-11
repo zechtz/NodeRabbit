@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Simple Reply Message Application</h1>
+    <button id="gfs_button">Get GFS Code</button>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+
+      var socket = io('ws://localhost:3000');
+
+      socket.on('new-gfs', function(){
+        /**
+          * this event happens when backend emits new-gfs event
+          */
+        console.log('socket event new-gfs');
+        alert('Received new gfs code through socket.io');
+      });
+
+      document.getElementById('gfs_button').addEventListener('click', function(){
+        socket.emit('gfs');
+      });
+    </script>
+  </body>
+</html>
