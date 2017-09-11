@@ -1,4 +1,4 @@
-# A simple NodeJS app detailing in interaction between Nodejs + RabbitMQ and SocketIO.
+# A simple NodeJS app that interacts with + RabbitMQ and SocketIO.
 
 ## Getting Started
 
