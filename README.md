@@ -15,7 +15,7 @@ run npm install
 
 ### Start the server by opening two terminal windows and run both app.js and worker.js
 ```sh
-node app
+node server
 ```
 
 ```sh
