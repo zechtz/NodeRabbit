@@ -86,6 +86,7 @@ function runServer(exchange){
 
       socket.on('gfs', function(){
         console.log('new-gfs through socket', theData);
+        socket.emit('gfs-received', theData);
         exchange.publish('gfs', {gfs: theData}, {
           replyTo: queue.name, headers: {emitEvent: 'new-gfs'}
         });

@@ -9,12 +9,21 @@
 
       var socket = io('ws://localhost:3000');
 
-      socket.on('new-gfs', function(){
+      socket.on('new-gfs', function(data){
         /**
           * this event happens when backend emits new-gfs event
           */
-        console.log('socket event new-gfs');
-        alert('Received new gfs code through socket.io');
+        console.log('socket event new-gfs', data);
+      });
+
+      /**
+       * this event happens when backend emits gfs-received event
+       * so we listen to the event
+       */
+      socket.on('gfs-received', function(data){
+        <!--console.log('socket event gfs-received', data);-->
+        var newData = JSON.stringify(data);
+        alert(newData);
       });
 
       document.getElementById('gfs_button').addEventListener('click', function(){
