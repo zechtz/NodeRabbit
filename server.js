@@ -17,6 +17,7 @@ connection.on('ready', function(){
    * connection.exchange(name, options={}, openCallback)
    * this is just basic  rabbitMQ exchange with ques
    * this will be improved and basically this is just backend stuff
+   * https://github.com/postwait/node-amqp
    *
    */
   connection.exchange('gfs_code', {autoDelete: false}, function(exchange) {
