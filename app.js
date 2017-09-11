@@ -2,7 +2,7 @@ var express    =  require('express');
 var amqp       =  require('amqp');
 var io         =  require('socket.io');
 var app        =  express();
-var port       =  8002;
+var port       =  3000;
 var connection =  amqp.createConnection();
 
 /**
